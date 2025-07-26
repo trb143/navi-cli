@@ -18,8 +18,9 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/Adron/cobra-cli-samples/configMgmt"
+	"github.com/trb143/navi-cli/configMgmt"
 	"github.com/spf13/cobra"
+
 )
 
 // deleteCmd represents the delete command

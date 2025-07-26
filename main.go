@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/Adron/cobra-cli-samples/cmd"
+import "github.com/trb143/navi-cli/cmd"
 
 func main() {
   cmd.Execute()

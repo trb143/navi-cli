@@ -16,8 +16,9 @@ limitations under the License.
 package cmd
 
 import (
-	"github.com/Adron/cobra-cli-samples/configMgmt"
+	"github.com/trb143/navi-cli/configMgmt"
 	"github.com/spf13/cobra"
+
 )
 
 // updateCmd represents the update command

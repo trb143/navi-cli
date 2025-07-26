@@ -1,4 +1,4 @@
-module github.com/Adron/cobra-cli-samples
+module github.com/trb143/navi-cli
 
 go 1.23
 

@@ -2,7 +2,7 @@ package configMgmt
 
 import (
 	"fmt"
-	"github.com/Adron/cobra-cli-samples/helper"
+	"github.com/trb143/navi-cli/helper"
 	"github.com/spf13/viper"
 	"io/ioutil"
 	"log"

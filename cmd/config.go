@@ -33,6 +33,7 @@ to quickly create a Cobra application.`,
 
 func init() {
 	rootCmd.AddCommand(configCmd)
+	rootCmd.CompletionOptions.DisableDefaultCmd = true
 	configCmd.PersistentFlags().StringP("key", "k", "", "The key for the key value set to add to the configuration.")
 	configCmd.PersistentFlags().StringP("value", "v", "", "The value for the key value set to add to the configuration.")
 }
