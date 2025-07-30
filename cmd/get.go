@@ -32,6 +32,7 @@ var getCmd = &cobra.Command{
 		key, _ := cmd.Flags().GetString("key")
 		settings := viper.AllSettings()
 		for i, v := range settings {
+			fmt.Println(key)
 			if i == key {
 				fmt.Printf("%v\n", v)
 			}

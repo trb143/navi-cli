@@ -49,14 +49,26 @@ func init() {
 }
 
 func initConfig() {
-	configFile = "navi-cli.yml"
 	viper.SetConfigType("yaml")
-	viper.SetConfigFile(configFile)
+	viper.SetConfigFile("navi-cli.yml")
 
 	viper.AutomaticEnv()
-	//viper.SetEnvPrefix("COBRACLISAMPLES")
+	viper.SetEnvPrefix("NAVICLI")
+	fmt.Println(viper.Get("global"))
+	fmt.Println(os.Getenv("NAVICLI_GLOBAL"))
+
+	if viper.Get("global") == "True" {
+		fmt.Println("T")
+		viper.AddConfigPath("$HOME/.config")
+	} else {
+		fmt.Println("L")
+		viper.AddConfigPath(".")
+		}
 
 	if err := viper.ReadInConfig(); err == nil {
+		fmt.Println("A")
 		helper.CheckPrint(fmt.Sprintf("Using configuration file: %s", viper.ConfigFileUsed()))
 	}
+	fmt.Println(viper.Get("ip"))
+	fmt.Println(viper.ConfigFileUsed())
 }
